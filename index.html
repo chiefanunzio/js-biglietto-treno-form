@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico">
+    <title>biglietto-js</title>
+  </head>
+
+  <body>
+    <script>
+      var kmDaPercorrere = prompt('quanti km vuoi percorrere?');
+      var etaPassegg = prompt('dimmi la tua eta');
+      var etaPassNum = parseInt(etaPassegg);
+      var price1Km = 0.21;
+      var resKm = kmDaPercorrere * price1Km;
+      var resMinore = ((resKm * 80) / 100);
+      var resOver = ((resKm * 60) / 100);
+        console.log(resKm, resMinore, resOver);
+      if (etaPassNum < 18){
+        console.log(resMinore + 'sconto del 20%');
+      }else if(etaPassNum > 65){
+        console.log(resOver + 'sconto del 40%');
+      }else {
+        console.log(resKm + 'prezzo pieno');
+      }
+    </script>
+
+  </body>
+
+</html>
